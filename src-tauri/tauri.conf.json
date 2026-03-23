@@ -1,0 +1,58 @@
+{
+  "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
+  "productName": "Gamgi Compliance",
+  "version": "1.0.0",
+  "identifier": "se.gamgi.compliance",
+  "build": {
+    "frontendDist": "../out",
+    "devUrl": "http://localhost:3001",
+    "beforeDevCommand": "npm run dev -- --port 3001",
+    "beforeBuildCommand": "npm run build"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Gamgi Compliance Tracker",
+        "width": 1280,
+        "height": 800,
+        "minWidth": 900,
+        "minHeight": 600,
+        "resizable": true,
+        "fullscreen": false,
+        "center": true
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "category": "Business",
+    "shortDescription": "GDPR, NIS2 och AI Act compliance-verktyg",
+    "longDescription": "Gamgi Compliance Tracker hjälper din organisation att hålla koll på GDPR-krav, registerförteckning, incidenthantering och rutiner.",
+    "copyright": "© 2026 Gamgi",
+    "macOS": {
+      "minimumSystemVersion": "10.15",
+      "exceptionDomain": "localhost"
+    },
+    "windows": {
+      "digestAlgorithm": "sha256",
+      "certificateThumbprint": null,
+      "timestampUrl": ""
+    },
+    "linux": {
+      "deb": {
+        "depends": []
+      }
+    }
+  }
+}
